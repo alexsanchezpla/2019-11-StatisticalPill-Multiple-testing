@@ -1,0 +1,77 @@
+---
+title: |
+    | _Multiple Comparisons an d Multiple Testing _
+    | Esquema de la xerrada 
+author: "Alex Sanchez-Pla"
+date: "Novembre 2019"
+output:
+ prettydoc::html_pretty:
+    toc: true
+    theme: cayman
+    highlight: github
+    number_sections: true
+editor_options: 
+  chunk_output_type: console
+# bibliography: references.bib
+# link-citations: yes
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA, prompt = TRUE, tidy = FALSE, fig.width = 7, fig.height = 7, fig_caption = TRUE,cache=FALSE)
+Sys.setlocale("LC_TIME", "C")
+```
+
+
+
+# Estructura de la xerrada
+
+1. Motivació 
+Considerem la selecció d'un biomarcador (també podria ser un de multiples _outcomes_) entre 8. (Logan #5) 
+2. Perquè parlem de multiplicitat? (Logan #6) 
+3. Parem i repassem (1) Què és un test (Logan #7) 
+4. Parem i repassem (2) Tipus d'errors (Logan #8) 
+    - Posar taula de decisions
+    - Repassar Harrell's comentaris: Type I "error"?
+5. La inflació de l'error tipus I (Logan #9, Bretz #4)
+6. Que s'hi pot fer ("Estratègies") (Logan #11) 
+7. Dues noves taxes d'error: FWER i FDR
+8. Controlant la FWER
+9. Controlant la FDR
+10. FWE vs FDR
+11. També podem fer IC
+12. IC simultanis
+13. Aspectes filosòfics
+    - Veure Gregorich's
+14. Exemples (Procediments específics)
+15. PE1: Multiple Variable Outcomes
+16. PE2: Multiple Groups (ANOVA)
+17. PE3: Large Multiplicity (OMICS)
+18. Altres que no veurem a fons
+    - Repeated measurements
+    - Subgroup Analñysis in RCT
+    - Interim Analysis in CT
+19. Resum i discussió
+    - Crítiques 
+    - ALternatives
+20. Referencies
+    
+
+
+
+# Fonts d'informació
+    - http://web.stanford.edu/class/bios221/book/Chap-Testing.html
+
+# Coses per no oblidar (tot  i que no se on aniran)
+
+- Ilustracions
+    + Simulacions amb Excel
+    + Shinys o altre software
+        - http://sia.webpopix.org/statisticalTests2.html
+    + http://www.real-statistics.com/hypothesis-testing/familywise-error/benjamini-hochberg-and-benjamini-yekutieli-tests/
+    + http://www.biostathandbook.com/multiplecomparisons.html
+        
+- Diferencia en el MTA per anàlisis exploratòries o confirmatòries
+- Quines eines es pot fer servir?
+- Crítiques i alternatives al MTA
+- Referències a guidelines

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" style="" class="js no-touch gr__statsimprove_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Multiple testing: when should we adjust for multiplicity? - StatsImprove</title>
+	<link rel="pingback" href="https://www.statsimprove.com/en/xmlrpc.php">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		
+	
+<!-- This site is optimized with the Yoast SEO plugin v10.1.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multiple testing: when should we adjust for multiplicity? - StatsImprove">
+<meta property="og:description" content="In this post we will try to provide some tips on how a researcher could answer the fateful question: should I adjust or not the significance level for multiple testing? The problem of multiplicity is a problem that concerns almost all scientific research and has not got yet a complete and definitive answer. Indeed, there …">
+<meta property="og:url" content="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/">
+<meta property="og:site_name" content="StatsImprove ">
+<meta property="article:section" content="Clinical Research">
+<meta property="article:published_time" content="2019-08-16T11:31:08+00:00">
+<meta property="article:modified_time" content="2019-08-16T12:55:00+00:00">
+<meta property="og:updated_time" content="2019-08-16T12:55:00+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="In this post we will try to provide some tips on how a researcher could answer the fateful question: should I adjust or not the significance level for multiple testing? The problem of multiplicity is a problem that concerns almost all scientific research and has not got yet a complete and definitive answer. Indeed, there […]">
+<meta name="twitter:title" content="Multiple testing: when should we adjust for multiplicity? - StatsImprove">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://maps.googleapis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="StatsImprove  » Feed" href="https://www.statsimprove.com/en/feed/">
+<link rel="alternate" type="application/rss+xml" title="StatsImprove  » Comments Feed" href="https://www.statsimprove.com/en/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="StatsImprove  » Multiple testing: when should we adjust for multiplicity? Comments Feed" href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.statsimprove.com\/en\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="cookie-notice-front-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="converio-opensans-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="main_style-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="headers-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/headers.css" type="text/css" media="all">
+<link rel="stylesheet" id="color-schemes-css" href="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/light-blue.css" type="text/css" media="all">
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/jquery.js"></script><style>@media print {#ghostery-purple-box {display:none !important}}</style>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var cnArgs = {"ajaxurl":"https:\/\/www.statsimprove.com\/en\/wp-admin\/admin-ajax.php","hideEffect":"fade","onScroll":"no","onScrollOffset":"100","cookieName":"cookie_notice_accepted","cookieValue":"true","cookieTime":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"","cache":"","refuse":"no","revoke_cookies":"0","revoke_cookies_opt":"automatic","secure":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/front.min.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/modernizr.js"></script>
+<link rel="https://api.w.org/" href="https://www.statsimprove.com/en/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.statsimprove.com/en/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.statsimprove.com/en/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="https://www.statsimprove.com/en/?p=426">
+<link rel="alternate" type="application/json+oembed" href="https://www.statsimprove.com/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.statsimprove.com%2Fen%2Fmultiple-testing-when-should-we-adjust-for-multiplicity%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.statsimprove.com/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.statsimprove.com%2Fen%2Fmultiple-testing-when-should-we-adjust-for-multiplicity%2F&amp;format=xml">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			
+			
+					<!--[if lt IE 9]>
+		<script src="https://www.statsimprove.com/en/wp-content/themes/converio/js/html5.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://www.statsimprove.com/en/wp-content/themes/converio/styles/style-ie.css" media="screen"></script>
+	<![endif]-->
+<style type="text/css">.fancybox-margin{margin-right:15px;}</style><script type="text/javascript" charset="UTF-8" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/util.js"></script></head>
+
+
+
+
+<body class="post-template-default single single-post postid-426 single-format-standard color-light-blue avatar-circle cookies-not-set" data-gr-c-s-loaded="true"><div class="root">
+
+		<header class="h1 header-opacity-enabled sticky-enabled sticky-no-topbar menu-animation-enabled hover-delay-enabled sticky-collapse sticky-opacity-enabled with-search-box lr-mi-with-widget-visible" data-sticky-trigger-position="400" data-menu-slidedown-duration="400" data-menu-slideup-duration="500" data-menu-fadein-duration="300" data-menu-fadeout-duration="400" style="">
+									<section class="main-header">
+		                <div>
+									                    <div itemtype="http://schema.org/Organization" itemscope="itemscope" class="title">
+		                        <div class="logo-wrapper">
+		                            <a class="logo" href="https://www.statsimprove.com/en/" itemprop="url">
+		                                <img alt="StatsImprove " src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/logo-statsimprove.png" itemprop="logo">
+									</a>
+		                        </div>
+		                    </div>							
+									                    <div class="nav-container">
+		                        <div class="mobile-group">
+		                            <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target="nav.mainmenu &gt; ul">Menu</button>
+		                            <ul class="mobile-nav dropdown-on-hover-enabled">
+											                                <li class="border">
+		                                    <a class="search collapsed" data-target=".search-box" href="javascript:;">
+		                                        <span class="search-icon">Search</span>
+		                                    </a>
+		                                </li>
+																																							                            </ul>
+		                        </div>
+
+								<nav class="nav-collapse mainmenu menu-container">
+									<ul id="menu-blog" class="menu"><li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328 mi-depth-0 mi-without-description"><a href="https://www.statsimprove.com/" class="submenu-trigger"><span class="mi-title-wrapper"><span class="mi-title">Home</span></span></a></li>
+<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-393 mi-depth-0 mi-without-description"><a href="https://www.statsimprove.com/en/" class="submenu-trigger"><span class="mi-title-wrapper"><span class="mi-title">Who We are and What We do</span></span></a></li>
+<li id="menu-item-327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327 mi-depth-0 mi-without-description dropdownmenu dropdownmenu-default parent"><a href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/#" class="submenu-trigger submenu-trigger-very-last"><span class="mi-title-wrapper"><span class="mi-title">Blog</span></span><span class="mi-expand-btn"></span></a>
+<ul class="sub-menu" style="z-index: 50;">
+	<li id="menu-item-324" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-324 mi-depth-1 mi-with-description"><a href="https://www.statsimprove.com/en/category/clinical-research/" class="submenu-trigger"><span class="mi-title-wrapper"><span class="mi-title">Clinical Research</span></span><span class="mi-desc">In questa categoria troverai materiale relativo alla pianificazione, all’analisi e al reporting delle analisi statistiche usate nella ricerca clinica.</span></a></li>
+	<li id="menu-item-325" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-325 mi-depth-1 mi-with-description"><a href="https://www.statsimprove.com/en/category/complex-modelling/" class="submenu-trigger"><span class="mi-title-wrapper"><span class="mi-title">Complex Modelling</span></span><span class="mi-desc">In questa categoria troverai materiale relativo alle estensioni del Modello Lineare Generale (GLM) e a metodi complessi di modellizazione dei dati (longitudinale, mixed models, missing data)</span></a></li>
+	<li id="menu-item-326" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-326 mi-depth-1 mi-with-description last-visible-menu-item"><a href="https://www.statsimprove.com/en/category/regression-and-anova/" class="submenu-trigger submenu-trigger-very-last"><span class="mi-title-wrapper"><span class="mi-title">Regression, ANOVA</span></span><span class="mi-desc">In questa categoria troverai metodi ordinari di regressione (lineare, logistica, poisson, survival) e di Analisi della Varianza</span></a></li>
+</ul>
+</li>
+</ul>									<div class="clear"></div>
+								</nav>
+		                    </div>
+
+								
+
+							<div class="search-box">
+								<form method="get" action="https://www.statsimprove.com/en">
+									<input type="text" value="Type your keywords" onfocus="if (this.value == &#39;Type your keywords&#39;) this.value = &#39;&#39;;" onblur="if (this.value == &#39;&#39;) this.value = &#39;Type your keywords&#39;;" name="s">
+								</form>
+							</div>
+		                </div>
+		            </section>
+					
+		
+				<div class="container-flag" style="position:absolute; top:5px; right:5px; z-index:9999999;">
+			<ul>
+				<li>
+					<a href="https://www.statsimprove.com//it">
+						<img class="img-flag" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/flag-italy.jpg" width="50" height="30">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.statsimprove.com//en">
+						<img class="img-flag" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/flag-england.jpg" width="50" height="30">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.statsimprove.com//ru">
+						<img class="img-flag" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/flag-russian.jpg" width="50" height="30">
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	<div class="s-801"></div><div class="s-981"></div></header>
+
+
+
+<section class="breadcrumb "><div class="custom-bg p02"></div><div class="content-container"><p><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.statsimprove.com/en" itemprop="url"><span itemprop="title">Home</span></a> <span>/</span> </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.statsimprove.com/en/category/clinical-research/" itemprop="url"><span itemprop="title">Clinical Research</span></a> <span>/</span> </span>Multiple testing: when should we adjust for multiplicity?</p><h1 class="b-title">Blog</h1></div></section>
+<section class="content ">
+<section class="main single" itemscope="" itemtype="http://schema.org/Article">
+					<article class="post">
+								<h2 class="entry-title">Multiple testing: when should we adjust for multiplicity?</h2>
+										<p class="post-meta" itemprop="datePublished" content="2019-08-16">16 August 2019<span>/</span>  <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">gianfranco</span></span> <span>/</span> <a href="https://www.statsimprove.com/en/category/clinical-research/" rel="category tag">Clinical Research</a> <span>/</span> <a href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/#respond">0 comments</a></p>
+						
+			<p>In this post we will try to provide some tips on how a researcher could answer the fateful question: should I adjust or not the significance level for multiple testing? The problem of multiplicity is a problem that concerns almost all scientific research and has not got yet a complete and definitive answer. Indeed, there are many scientific publications that ignore the multiplicity of hypotheses tested and the inflation of the first type error. To make you understand the problem better, we will provide you an example of a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4177585/">paper published in 2014</a>, that estimated the percentage of these jobs at around 50% in multi-arm trials. About half: is it too much? Is it an acceptable percentage?</p>
+<p><strong>It is not easy to answer, because there is no consensus in the scientific community,</strong> nor even at the regulatory authorities. For example, <a href="https://www.ema.europa.eu/en/documents/scientific-guideline/draft-guideline-multiplicity-issues-clinical-trials_en.pdf">the guidelines on this problem provided by EMA’s</a> (European Medicines Agency) leave room for a thousand interpretations, also due to the fact that the possible study designs of a clinical trial are potentially infinite.</p>
+<p><strong>In short: we must arm ourselves with a bit of common sense, a spirit of clarity and truth, and possess some decision criteria.</strong></p>
+<h1>The Multiple Testing Problem</h1>
+<p>Although it is not possible to address the problem of multiplicity in depth, before leaving we try to understand briefly what we encounter when we ignore the presence of multiple testing in our study and do not adjust the level of a statistical significance.</p>
+<p>Let’s say you’re conducting an experiment using two anti-asthmatic drugs and would like to measure the difference between them estimating two outcomes: an efficacy, for example the FEV1, and the quality of life of patients (measured through a particular questionnaire).</p>
+<p>You conduct your tests and declare the limit of statistical significance considered at 5%. Now, considering the 5% limit for both tests, your chance to make the first type error in at least one of two tests will increase from 5 to 9.75%.</p>
+<p>The formula to get 9.75% is very simple:</p>
+<p>P=(1-(1-α)k</p>
+<p>Where:<br>
+P is the probability of at least one significant test;<br>
+α is the level of significance;<br>
+k is the number of tests conducted.</p>
+<p>How can we protect ourselves from these possible “false positives”? There is a number of techniques that allow us to distribute that fateful 5% significance level by dividing it into different tests that are conducted within the study. The most used technique is the Bonferroni correction.</p>
+<p>In this post we will not talk about variety of techniques to manage multiplicity. The objective of this article is to understand:<br>
+how to decide whether to adjust or not for the multiplicity?</p>
+<p>As it said above, there is still much debate about it. What you will read below is my personal opinion, but it is largely supported by scientific literature.</p>
+<p>Let’s start.</p>
+<h1>What to do?</h1>
+<p><strong>The most solid strategy is to establish the nature of the study and of the test performed: exploratory or confirmatory?</strong></p>
+<p>Generally, when your study has an exploratory nature (such as studies in which there is no estimate of the sample size, or a formal power calculation), the strategy could be:<br>
+don’t correct for multiplicity;<br>
+declare clearly the exploratory nature of the study;<br>
+indicate in the methods chapter that it was not corrected for the multiplicity given the exploratory nature of the study; clarify the decision in the discussion chapter.</p>
+<p>When the study and the tests have a confirmative nature then the goal is “to be cautious” and to consider the possibility of obtaining falsely significant results.</p>
+<p>Below is a list of the most frequent scenarios.</p>
+<p><strong>When you have multiple endpoints</strong> where none of them is not considered the most important, then it is necessary to correct for multiplicity. A very trivial example: 3 cardiovascular outcomes (arterial pressure, heart rate, alterations of the electrocardiographic pattern); none of them has a clinical relevance higher than others and each of them then get tested by an ad hoc test separately from each other.</p>
+<p>It is necessary to correct for multiplicity when all tests of the endpoints were statistically significant.</p>
+<p><strong>When your study has repeated measures over time</strong> and the test is performed at different timepoints (for example to see the effect of a treatment after two months, 6 months and 12 months), then even here the correction becomes necessary.</p>
+<p><strong>When you have a confirmatory multi-arm study (with more than two treatments) and with more pairwise comparisons (for example: treatment 1 vs 2, 2 vs 3, 1 vs 3), then even here it is necessary to correct.</strong> In this case some authors argue that we should consider whether the treatments are related or not, or whether they are “of the same nature”. For example: if the three arms of the study are two doses of drug and a placebo, then the correction is appropriate. When instead the arms are of a completely unrelated nature the multiplicity problem can become superfluous.</p>
+<p>For example: if in a trial we want to evaluate an educational and a pharmacological approach against a control group in the treatment of alcoholism, then the “educational arm” vs. control and “pharmacological arm” vs. control comparisons can be considered as two different trials and it could be conceptually wrong to correct for multiplicity in this case.</p>
+<p><strong>Analyses by subgroup and all other post-hoc tests are almost always considered to be exploratory, so the correction becomes useless.</strong> I have written “almost always” because in some cases the subgroup analysis can have a confirmatory role in a hypothesis unrelated to the main hypothesis of the study.</p>
+<p>For example: study with two arms, drug treatment vs. educational program for treating an addiction. The main analysis is the evaluation of the effectiveness of the family treatment. The analysis on a subgroup may aim, for example, at identifying the link between the degree of alcoholism and the fertility level of males.</p>
+<p>In this case, imho, it is useless to correct for multiplicity (the analysis is secondary and uncorrelated with the main one) but at the same time we must also consider that very often these ancillary analyses have statistical power problems. And this should be carefully measured and discussed.</p>
+<p><strong>When you are using two data sets to perform the same analysis (for example the “per protocol” or “intention to treat” data set) in general it is not necessary to correct for multiplicity.</strong></p>
+<p><strong>When you conduct interim analysis you need to correct for multiplicity.</strong> In this case, the strategy would be using a very high level of a significance for the interim analysis (for example 1%) in order to leave a remaining 4% for the final test of the study.</p>
+<p><strong>As per observational studies,</strong> again in my opinion, the situation does not change. It remains necessary to establish very clearly what the confirmatory and exploratory tests of the study are. It must be said, in this regard, that in observational studies this effort of clarity is always less common than in clinical trials and often studies are peppered with dozens of p-values that are often useless.</p>
+<p><strong>The judgment of Kenneth Rothman</strong>, one of the fathers of modern epidemiology, is interesting. According to Kenneth, the correction for multiplicity should always be avoided because it would make scientific research too conservative. It is better to obtain falsely significant results and further explore hypotheses in subsequent studies, instead of “castrating” too much evidence by excessively lowering alpha levels.</p>
+			
+						
+					</article>
+
+				<ul class="social social-colored social-sharing">
+		<li><a href="http://www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/&amp;p[images][0]=&amp;p[title]=Multiple+testing%3A+when+should+we+adjust+for+multiplicity%3F" class="facebook" target="_blank" data-original-title="Facebook" rel="nofollow">Facebook</a>	</li><li><a href="http://twitter.com/share?text=Check%20this%20out:%20&amp;url=https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/" class="twitter" target="_blank" data-original-title="Twitter" rel="nofollow">Twitter</a></li>  
+	<li><a href="https://plus.google.com/share?url=https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/" class="googleplus" target="_blank" data-original-title="Google+" rel="nofollow">Google+</a></li>  
+		<li><a href="http://pinterest.com/pin/create/button/?url=https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/&amp;description=Multiple+testing%3A+when+should+we+adjust+for+multiplicity%3F" target="_blank" class="pinterest" data-original-title="Pinterest" rel="nofollow">Pinterest</a></li></ul>				
+
+															
+						<div id="comments">
+		<section class="comment-form" id="respond">
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.statsimprove.com/en/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes">Your email address will not be published.</p><label for="comment">Comment</label><textarea name="comment" id="comment" rows="8" cols="50"></textarea><ul><li><label for="author">Name <span class="required">*</span></label><input id="author" name="author" aria-required="true" value=""></li>
+<li><label for="email">Email <span class="required">*</span></label><input id="email" name="email" aria-required="true" value=""></li>
+<li><label for="url">Website</label><input id="url" name="url" aria-required="true" value=""></li></ul>
+<p class="comment-form-cookies-consent"><label class="checkbox"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"></label><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="426" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e31f3da1d7"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1576327382938"></form>
+			</div><!-- #respond -->
+			
+	</section>
+</div>
+		
+	<meta itemprop="dateModified" content="2019-08-16T14:55:00+01:00">
+	<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/">
+	<meta itemprop="headline" content="Multiple testing: when should we adjust for multiplicity?">
+	
+	<span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+	<span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+	<meta itemprop="url" content="https://www.statsimprove.com/en/wp-content/uploads/sites/3/2019/04/logo-statsimprove.png">
+	</span>
+	<meta itemprop="name" content="StatsImprove ">
+	</span>
+		<span itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">	
+	<meta itemprop="url" content="">
+	<meta itemprop="width" content="">
+	<meta itemprop="height" content="">
+	</span>
+</section>
+<aside>
+	<section class="widget widget_search"><form method="get" class="searchform" action="https://www.statsimprove.com/en">
+<fieldset>
+	<input type="text" value="" name="s" placeholder="Search" id="s">
+	<button type="submit" name="searchsubmit" value="Search">Search</button>
+</fieldset>
+</form>
+</section>		<section class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://www.statsimprove.com/en/thesis-or-phd-thesis-why-is-statistics-so-important/">Thesis or PhD thesis: why is statistics so important?</a>
+									</li>
+											<li>
+					<a href="https://www.statsimprove.com/en/when-does-it-make-sense-to-interpret-the-main-effects-in-the-presence-of-interaction/">When does it make sense to interpret the main effects in the presence of interaction?</a>
+									</li>
+											<li>
+					<a href="https://www.statsimprove.com/en/interpreting-the-effect-of-treatment-the-difference-between-conditional-and-marginal-models/">Interpreting the effect of treatment: the difference between conditional and marginal models</a>
+									</li>
+											<li>
+					<a href="https://www.statsimprove.com/en/explaining-odds-ratios-to-non-statisticians/">Explaining Odds Ratios to non-statisticians</a>
+									</li>
+											<li>
+					<a href="https://www.statsimprove.com/en/outliers-in-data-analysis-keep-them-or-remove-them/">Outliers in data analysis: keep them or remove them?</a>
+									</li>
+					</ul>
+		</section><section class="widget widget_recent_comments"><h3>Recent Comments</h3><ul id="recentcomments"></ul></section><section class="widget widget_archive"><h3>Archives</h3>		<ul>
+				<li><a href="https://www.statsimprove.com/en/2019/08/">August 2019</a></li>
+	<li><a href="https://www.statsimprove.com/en/2019/04/">April 2019</a></li>
+	<li><a href="https://www.statsimprove.com/en/2019/03/">March 2019</a></li>
+		</ul>
+			</section><section class="widget widget_categories"><h3>Categories</h3>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://www.statsimprove.com/en/category/clinical-research/" title="In this category you will find material related to the planning, analysis and reporting of statistical analyses used in clinical research.">Clinical Research</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.statsimprove.com/en/category/complex-modelling/" title="In this category you will find material related to the extensions of the General Linear Model (GLM) and to complex methods of data modeling (longitudinal, mixed models, missing data)">Complex Modelling</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://www.statsimprove.com/en/category/regression-and-anova/" title="In this category you will find ordinary regression methods (linear, logistic, poisson, survival) and Variance Analysis">Regression, ANOVA</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.statsimprove.com/en/category/senza-categoria/">Senza categoria</a>
+</li>
+		</ul>
+			</section><section class="widget widget_meta"><h3>Meta</h3>			<ul>
+						<li><a rel="nofollow" href="https://www.statsimprove.com/en/wp-login.php">Log in</a></li>
+			<li><a href="https://www.statsimprove.com/en/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://www.statsimprove.com/en/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</section></aside>
+</section>
+<div class="clear"></div>
+
+			<a href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/#top" class="go-top">top</a>
+	
+
+	
+	<footer>
+			
+		<section class="bottom">
+			
+							<p>2013-2016 Converio WordPress Theme by <a href="http://thememotive.com/">ThemeMotive.</a> | All rights reserved.</p>
+						<nav class="social social-light social-colored">
+				<ul>
+										<li><a href="https://www.statsimprove.com/en/feed/" class="rss" target="_blank" data-original-title="RSS">RSS</a></li>
+									</ul>
+			</nav>
+		</section>
+	</footer>
+</div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.statsimprove.com\/en\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/scripts.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/scripts(1).js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/respond.min.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/header.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/jquery.slides.min.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/wp-embed.min.js"></script>
+<script type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/comment-reply.min.js"></script>
+<script async="async" type="text/javascript" src="./Multiple testing_ when should we adjust for multiplicity_ - StatsImprove_files/form.js"></script>
+
+			<div id="cookie-notice" role="banner" class="cn-bottom bootstrap" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); visibility: visible;"><div class="cookie-notice-container"><span id="cn-notice-text">We use cookies to make sure you can have the best experience on our site. If you continue to use this site we will assume that you are happy with it.</span><a href="https://www.statsimprove.com/en/multiple-testing-when-should-we-adjust-for-multiplicity/#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap button">Ok</a>
+				</div>
+				
+			</div>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://www.statsimprove.com/en/wp-content/themes/converio/js/ie.js"></script>
+<![endif]-->
+
+<div id="uvpn_rate_us">            <div class="uvpn_wrap">                <div class="uvpn_logo-ext">                    <div class="uvpn_logo-wrap">                        <img src="chrome-extension://gpieacagdjdfbifodokiccinpbacemjf/img/128.png">                    </div>                </div>                <div class="uvpn_title">                    Don’t Forget to Rate Us                </div>                <div class="uvpn_desc">                    If you enjoy our product, give us 5 stars. It helps so much!                </div>                <div class="stars">                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                </div>                <a target="_blank" href="https://chrome.google.com/webstore/detail/uvpn-free-and-unlimited-v/gpieacagdjdfbifodokiccinpbacemjf/reviews" id="rate_btn_rateus" class="uvpn_rate-btn uvpn_btn">                    Rate Us                </a>                <div id="close_btn_rateus" class="uvpn_later-btn uvpn_btn">                    Not Now                </div>            </div>        </div><div id="free_vpn_container">            <div class="free-vpn_wrap">                <div class="free-vpn_rate-popup">                    <div class="free-vpn_close-btn">                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">                            <g>                                <g>                                    <path fill="#afafaf" d="M505.943,6.058c-8.077-8.077-21.172-8.077-29.249,0L6.058,476.693c-8.077,8.077-8.077,21.172,0,29.249                                        C10.096,509.982,15.39,512,20.683,512c5.293,0,10.586-2.019,14.625-6.059L505.943,35.306                                        C514.019,27.23,514.019,14.135,505.943,6.058z"></path>                                </g>                            </g>                            <g>                                <g>                                    <path fill="#afafaf" d="M505.942,476.694L35.306,6.059c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.076-8.077,21.171,0,29.248l470.636,470.636                                        c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.624-6.057C514.018,497.866,514.018,484.771,505.942,476.694z"></path>                                </g>                            </g>                        </svg>                    </div>                    <div class="free-vpn_logo"></div>                    <div class="free-vpn_title">Free VPN</div>                    <div class="free-vpn_text">                        Enjoyed our app? Give us 5 stars!                    </div>                    <div class="free-vpn_stars">                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.354 46.354" style="enable-background:new 0 0 46.354 46.354;" xml:space="preserve"><g><g>                            <path d="M21.57,2.049c0.303-0.612,0.927-1,1.609-1c0.682,0,1.307,0.388,1.609,1l5.771,11.695c0.261,0.529,0.767,0.896,1.352,0.981   L44.817,16.6c0.677,0.098,1.237,0.572,1.448,1.221c0.211,0.649,0.035,1.363-0.454,1.839l-9.338,9.104   c-0.423,0.412-0.616,1.006-0.517,1.588l2.204,12.855c0.114,0.674-0.161,1.354-0.715,1.756c-0.553,0.4-1.284,0.453-1.89,0.137   l-11.544-6.07c-0.522-0.275-1.147-0.275-1.67,0l-11.544,6.069c-0.604,0.317-1.337,0.265-1.89-0.136   c-0.553-0.401-0.829-1.082-0.714-1.756l2.204-12.855c0.1-0.582-0.094-1.176-0.517-1.588L0.542,19.66   c-0.489-0.477-0.665-1.19-0.454-1.839c0.211-0.649,0.772-1.123,1.449-1.221l12.908-1.875c0.584-0.085,1.09-0.452,1.351-0.982   L21.57,2.049z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFD325"></path>                        </g></g> </svg>                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.354 46.354" style="enable-background:new 0 0 46.354 46.354;" xml:space="preserve"><g><g>                            <path d="M21.57,2.049c0.303-0.612,0.927-1,1.609-1c0.682,0,1.307,0.388,1.609,1l5.771,11.695c0.261,0.529,0.767,0.896,1.352,0.981   L44.817,16.6c0.677,0.098,1.237,0.572,1.448,1.221c0.211,0.649,0.035,1.363-0.454,1.839l-9.338,9.104   c-0.423,0.412-0.616,1.006-0.517,1.588l2.204,12.855c0.114,0.674-0.161,1.354-0.715,1.756c-0.553,0.4-1.284,0.453-1.89,0.137   l-11.544-6.07c-0.522-0.275-1.147-0.275-1.67,0l-11.544,6.069c-0.604,0.317-1.337,0.265-1.89-0.136   c-0.553-0.401-0.829-1.082-0.714-1.756l2.204-12.855c0.1-0.582-0.094-1.176-0.517-1.588L0.542,19.66   c-0.489-0.477-0.665-1.19-0.454-1.839c0.211-0.649,0.772-1.123,1.449-1.221l12.908-1.875c0.584-0.085,1.09-0.452,1.351-0.982   L21.57,2.049z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFD325"></path>                        </g></g> </svg>                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.354 46.354" style="enable-background:new 0 0 46.354 46.354;" xml:space="preserve"><g><g>                            <path d="M21.57,2.049c0.303-0.612,0.927-1,1.609-1c0.682,0,1.307,0.388,1.609,1l5.771,11.695c0.261,0.529,0.767,0.896,1.352,0.981   L44.817,16.6c0.677,0.098,1.237,0.572,1.448,1.221c0.211,0.649,0.035,1.363-0.454,1.839l-9.338,9.104   c-0.423,0.412-0.616,1.006-0.517,1.588l2.204,12.855c0.114,0.674-0.161,1.354-0.715,1.756c-0.553,0.4-1.284,0.453-1.89,0.137   l-11.544-6.07c-0.522-0.275-1.147-0.275-1.67,0l-11.544,6.069c-0.604,0.317-1.337,0.265-1.89-0.136   c-0.553-0.401-0.829-1.082-0.714-1.756l2.204-12.855c0.1-0.582-0.094-1.176-0.517-1.588L0.542,19.66   c-0.489-0.477-0.665-1.19-0.454-1.839c0.211-0.649,0.772-1.123,1.449-1.221l12.908-1.875c0.584-0.085,1.09-0.452,1.351-0.982   L21.57,2.049z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFD325"></path>                        </g></g> </svg>                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.354 46.354" style="enable-background:new 0 0 46.354 46.354;" xml:space="preserve"><g><g>                            <path d="M21.57,2.049c0.303-0.612,0.927-1,1.609-1c0.682,0,1.307,0.388,1.609,1l5.771,11.695c0.261,0.529,0.767,0.896,1.352,0.981   L44.817,16.6c0.677,0.098,1.237,0.572,1.448,1.221c0.211,0.649,0.035,1.363-0.454,1.839l-9.338,9.104   c-0.423,0.412-0.616,1.006-0.517,1.588l2.204,12.855c0.114,0.674-0.161,1.354-0.715,1.756c-0.553,0.4-1.284,0.453-1.89,0.137   l-11.544-6.07c-0.522-0.275-1.147-0.275-1.67,0l-11.544,6.069c-0.604,0.317-1.337,0.265-1.89-0.136   c-0.553-0.401-0.829-1.082-0.714-1.756l2.204-12.855c0.1-0.582-0.094-1.176-0.517-1.588L0.542,19.66   c-0.489-0.477-0.665-1.19-0.454-1.839c0.211-0.649,0.772-1.123,1.449-1.221l12.908-1.875c0.584-0.085,1.09-0.452,1.351-0.982   L21.57,2.049z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFD325"></path>                        </g></g> </svg>                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.354 46.354" style="enable-background:new 0 0 46.354 46.354;" xml:space="preserve"><g><g>                            <path d="M21.57,2.049c0.303-0.612,0.927-1,1.609-1c0.682,0,1.307,0.388,1.609,1l5.771,11.695c0.261,0.529,0.767,0.896,1.352,0.981   L44.817,16.6c0.677,0.098,1.237,0.572,1.448,1.221c0.211,0.649,0.035,1.363-0.454,1.839l-9.338,9.104   c-0.423,0.412-0.616,1.006-0.517,1.588l2.204,12.855c0.114,0.674-0.161,1.354-0.715,1.756c-0.553,0.4-1.284,0.453-1.89,0.137   l-11.544-6.07c-0.522-0.275-1.147-0.275-1.67,0l-11.544,6.069c-0.604,0.317-1.337,0.265-1.89-0.136   c-0.553-0.401-0.829-1.082-0.714-1.756l2.204-12.855c0.1-0.582-0.094-1.176-0.517-1.588L0.542,19.66   c-0.489-0.477-0.665-1.19-0.454-1.839c0.211-0.649,0.772-1.123,1.449-1.221l12.908-1.875c0.584-0.085,1.09-0.452,1.351-0.982   L21.57,2.049z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFD325"></path>                        </g></g> </svg>                    </div>                    <a class="free-vpn_rate-btn" target="_blank" href="https://chrome.google.com/webstore/detail/free-vpn-the-fastest-vpn/nkomfibbgccdjcahcpleidblgknecfhh/reviews">Rate VPN</a>                </div>            </div>        </div></body></html>
