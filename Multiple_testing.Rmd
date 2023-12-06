@@ -28,13 +28,11 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 ```{r packages, include=FALSE}
 require(devtools)
-if(!require(installifnot)) install_github("uebvhir/installifnot")
-
-installifnot("XML")
-installifnot("GGally")
-installifnot("readxl")
-installifnot("kableExtra")
-installifnot("webshot")
+if (!require(XML)) install.packages("XML", dep=TRUE)
+if (!require(GGally)) install.packages("GGally", dep=TRUE)
+if (!require(readxl)) install.packages("readxl", dep=TRUE)
+if (!require(kableExtra)) install.packages("kableExtra", dep=TRUE)
+if (!require(webshot)) install.packages("webshot", dep=TRUE)
 ```
 
 <style type="text/css">
@@ -165,7 +163,7 @@ knitr::include_graphics("images/multiplicityExamples3Microarrays.png")
 - Most situations desbribed above can be described or related with a __test of hypothesis__.
 - Tests use to be summarized with __p-values__. <br>
 - __p-value__ : Probability, assuming no effect $(H_0)$, to obtain a difference greater or equal than the one observed on a given sample. <br>
-- Standard criterion: "reject $H_0$ if $p \geq \alpha$".
+- Standard criterion: "reject $H_0$ if $p \leq \alpha$".
      
 ---
 
